@@ -32,14 +32,9 @@ byteArr = []
 reverseByteArr = []
 
 garbageDay = open("HDZERO_NEW_TX.bin", "wb")
-garbageSource = open("HDZERO_BITUNFLIPPED.bin", "wb")
 
 for sourceByte in keilContent:
     byteArr.append(byteMap[sourceByte])
 
-for destinationByte in hdzeroContent:
-    reverseByteArr.append(reverseByteMap[destinationByte])
-
 garbageDay.write(bytearray(byteArr))
-garbageSource.write(bytearray(reverseByteArr))
 print("Done.")
