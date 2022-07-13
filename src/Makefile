@@ -11,7 +11,7 @@ CFLAGS=-m$(FAMILY) --model-large --opt-code-speed --stack-auto
 build: $(MAIN_SOURCE:=.ihx)
 
 $(MAIN_SOURCE:=.ihx): $(MAIN_SOURCE:=.rel) $(SOURCES:=.rel)
-	$(SDCC) $(CFLAGS) --xram-size 65536 --iram-size 65536 --code-size 65536 --out-fmt-ihx $(MAIN_SOURCE:=.rel) $(SOURCES:=.rel)
+	$(SDCC) $(CFLAGS) --xram-size 65536 --iram-size 256 --code-size 65536 --out-fmt-ihx $(MAIN_SOURCE:=.rel) $(SOURCES:=.rel)
 
 clean:
 	rm -f *.ihx *.lk *.lst *.map *.rel *.rst *.sym *.asm
