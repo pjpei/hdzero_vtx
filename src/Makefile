@@ -12,6 +12,7 @@ build: $(MAIN_SOURCE:=.ihx)
 
 $(MAIN_SOURCE:=.ihx): $(MAIN_SOURCE:=.rel) $(SOURCES:=.rel)
 	$(SDCC) $(CFLAGS) --xram-size 65536 --iram-size 256 --code-size 65536 --out-fmt-ihx $(MAIN_SOURCE:=.rel) $(SOURCES:=.rel)
+	objcopy -Iihex -Obinary mcu.ihx HDZERO_TX.bin
 
 clean:
 	rm -f *.ihx *.lk *.lst *.map *.rel *.rst *.sym *.asm
