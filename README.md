@@ -1,3 +1,7 @@
+## SDCC version of the HDZero VTX Firmware, stripped down to remove camera OSD controls
+
+This compiles with SDCC, go to the src subfolder and type "make".  Unsure if it works, will test later.
+
 ## HDZero VTX Firmware
 
 Firmware runs on a build-in C51 MCU of DM5680 which is the Baseband chip of VTX.
